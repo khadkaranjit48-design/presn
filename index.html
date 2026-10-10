@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajesh Dai Ko Cafe | Premium Nepalese Cafe & Bakery</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-all/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>☕ "Good Coffee, Great Bread — Simple Food, Big Happiness" | Welcome to <strong>Rajesh Dai Ko Cafe</strong></span>
+    <button class="announcement-close" onclick="this.parentElement.style.display='none'" aria-label="Close message">&times;</button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">☕</span>
+        <div class="logo-text">
+          <span class="brand-name">RAJESH DAI KO CAFE</span>
+          <span class="brand-sub">The Pride of Nepal</span>
+        </div>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Rajesh Dai</a>
+        <a href="#menu" class="nav-link">Menu (₩)</a>
+        <a href="#specials" class="nav-link">Daily Specials</a>
+        <a href="#reservations" class="nav-link">Book Table</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="cart-btn" class="btn-cart" aria-label="Open Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Poster Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-poster-container">
+      <img 
+        src="watermarked_img_4360881350123534997.jpg" 
+        alt="Rajesh Dai Ko Cafe Poster featuring Rajesh Hamal" 
+        class="hero-poster-img"
+        onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80'"
+      >
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fa-solid fa-star"></i> Dedicated to Rajesh Hamal — The Pride of Nepal</div>
+      <h1 class="hero-title">RAJESH DAI KO CAFE</h1>
+      <p class="hero-subtitle">Good Coffee • Great Bread • Simple Food, Big Happiness</p>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary btn-lg"><i class="fa-solid fa-utensils"></i> View Menu & Order (₩)</a>
+        <a href="#reservations" class="btn btn-outline btn-lg"><i class="fa-solid fa-calendar-check"></i> Reserve a Table</a>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature-item">
+          <i class="fa-solid fa-fire"></i>
+          <span>Freshly Baked Daily</span>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-mug-hot"></i>
+          <span>Organic Himalayan Beans</span>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-won-sign"></i>
+          <span>Best KRW Value</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Brand Banner -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card text-center">
+          <div class="about-icon"><i class="fa-solid fa-crown"></i></div>
+          <h3>Inspired by Greatness</h3>
+          <p>Named in honor of Nepal's legendary icon, <strong>Rajesh Hamal</strong>. We deliver authentic warmth, incredible coffee, and artisan bread crafted every morning.</p>
+        </div>
+        <div class="about-card text-center">
+          <div class="about-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Organic Nepalese Beans</h3>
+          <p>Single-origin arabica coffee beans ethically sourced directly from Himalayan foot slopes, roasted to perfection in small daily batches.</p>
+        </div>
+        <div class="about-card text-center">
+          <div class="about-icon"><i class="fa-solid fa-bread-slice"></i></div>
+          <h3>Artisan Korean Bakery</h3>
+          <p>Sourdough, butter rolls, custard pastries, and traditional bread baked with pure ingredients at honest Korean Won (₩) prices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Explore Our Flavors</span>
+        <h2 class="section-title">RAJESH DAI KO MENU</h2>
+        <p class="section-desc">All items priced transparently in South Korean Won (₩)</p>
+      </div>
+
+      <!-- Controls & Filters -->
+      <div class="menu-controls">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menu-search" placeholder="Search coffee, bread, momo, breakfast..." aria-label="Search menu items">
+        </div>
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-category="all">All Items</button>
+          <button class="tab-btn" data-category="coffee">☕ Coffee & Drinks</button>
+          <button class="tab-btn" data-category="bakery">🥐 Bakery & Bread</button>
+          <button class="tab-btn" data-category="nepalese">🥟 Nepalese Specials</button>
+          <button class="tab-btn" data-category="combos">🌟 Combo Deals</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Special Countdown -->
+  <section class="specials-section" id="specials">
+    <div class="container">
+      <div class="specials-card">
+        <div class="specials-content">
+          <span class="badge-special"><i class="fa-solid fa-bolt"></i> Today's Rajesh Dai Combo Deal</span>
+          <h2>Hamal Special Espresso + Fresh Butter Bread</h2>
+          <p>Get a signature Himalayan Espresso paired with our freshly baked artisan butter bun at a discounted bundle rate!</p>
+          
+          <div class="timer-container">
+            <span class="timer-label">Deal Expires In:</span>
+            <div class="timer-boxes">
+              <div class="timer-box"><span id="hours">05</span><small>Hours</small></div>
+              <div class="timer-box"><span id="minutes">24</span><small>Mins</small></div>
+              <div class="timer-box"><span id="seconds">42</span><small>Secs</small></div>
+            </div>
+          </div>
+
+          <div class="specials-price">
+            <span class="price-old">₩9,000</span>
+            <span class="price-current">₩6,500</span>
+            <span class="price-save">Save ₩2,500</span>
+          </div>
+
+          <button class="btn btn-primary btn-lg" onclick="addComboToCart()"><i class="fa-solid fa-cart-plus"></i> Claim Special Offer (₩6,500)</button>
+        </div>
+        <div class="specials-img-box">
+          <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=80" alt="Rajesh Dai Special Combo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section class="reservations-section" id="reservations">
+    <div class="container">
+      <div class="reservation-card">
+        <div class="reservation-info">
+          <span class="section-tag">Book A Table</span>
+          <h2>Visit Rajesh Dai Ko Cafe</h2>
+          <p>Reserve your cozy corner for meetings, study sessions, or hanging out with friends. Enjoy fresh coffee and food in a friendly atmosphere.</p>
+          
+          <div class="contact-details">
+            <p><i class="fa-solid fa-location-dot"></i> Gorkha-Kathmandu Highway & Downtown Seoul Branch</p>
+            <p><i class="fa-solid fa-clock"></i> Open Daily: 07:00 AM – 10:00 PM</p>
+            <p><i class="fa-solid fa-phone"></i> Direct Booking: +82 02-555-0199</p>
+          </div>
+        </div>
+
+        <form class="reservation-form" id="res-form">
+          <h3>Table Reservation</h3>
+          <div class="form-group">
+            <label for="res-name">Your Full Name</label>
+            <input type="text" id="res-name" required placeholder="e.g. Ranjit Khadka">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Date</label>
+              <input type="date" id="res-date" required>
+            </div>
+            <div class="form-group">
+              <label for="res-time">Time Slot</label>
+              <select id="res-time" required>
+                <option value="">Select Time</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="18:00">06:00 PM</option>
+                <option value="20:00">08:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" required>
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Persons</option>
+              <option value="4">4 Persons</option>
+              <option value="6">6+ Group</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-check"></i> Confirm Reservation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>RAJESH DAI KO CAFE</h3>
+          <p>Good Coffee • Great Bread • Simple Food, Big Happiness</p>
+          <p class="copyright">© 2026 Rajesh Dai Ko Cafe. All rights reserved.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home Page</a></li>
+            <li><a href="#menu">Menu & Prices (₩)</a></li>
+            <li><a href="#specials">Daily Discounts</a></li>
+            <li><a href="#reservations">Book Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Our Cafe</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Your Order (₩)</h3>
+      <button class="cart-close" id="cart-close">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items-container">
+      <!-- Items dynamically injected here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₩0</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery / Service Fee</span>
+          <span>₩2,000</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total (KRW)</span>
+          <span id="cart-total">₩0</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-btn" onclick="processCheckout()">
+        <i class="fa-solid fa-credit-card"></i> Complete Order (₩)
+      </button>
+    </div>
+  </aside>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
